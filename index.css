@@ -1,0 +1,341 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+html {
+    font-family: 'Roboto Condensed', sans-serif;
+    width: 100%;
+} 
+
+#welcome-section {
+    height: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "headshot welcome-text";
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+}
+
+.nav-links {
+    display:flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.nav-links li{
+    list-style: none;
+}
+
+.nav-links a{
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 5px;
+    grid-area: burger;
+    transition: all 0.3s ease;
+}
+
+#headshot {
+    border-radius: 250px;
+    height: 300px;
+    margin-right: 60px;
+    align-self: center;
+    justify-self: right;
+    grid-area: headshot;
+    box-shadow: 0px 1px 20px 3px #888888;;
+}
+
+#welcome-text {
+    grid-area: welcome-text;
+    align-self: center;
+    justify-self: left;
+    margin-left: 30px;
+    font-size: 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 100px 100px 100px;
+    grid-template-areas: 
+    "hello"
+    "my-name"
+    "I-am"
+}
+
+#welcome-text h1 {
+    font-size: 70px;
+    font-weight: bold;
+}
+
+#hello {
+    grid-area: hello;
+    align-self: end;
+
+}
+
+#my-name {
+    margin-top: 20px;
+    grid-area: my-name;
+    align-self: center;
+}
+
+#I-am {
+    grid-area: I-am;
+    align-self: start;
+    margin-top: 20px;
+    margin-right: 75px;
+} 
+
+#skills {
+    margin-top: 30px;
+    padding: 50px;
+    background-image: linear-gradient(to bottom right, rgb(0, 0, 0), rgb(77, 77, 77));
+    height: 500px;
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr 135px 135px 135px 135px 135px 1fr;
+    grid-template-rows: 50px 350px;
+    grid-template-areas: 
+    ". . . skills-header . . ."
+    ". html css bootstrap javascript react .";
+    align-items: center;
+    justify-items: center;
+}
+
+#skills-header {
+    grid-area: skills-header;
+    color: white;
+    justify-content: center;
+}
+
+#skills-header-text {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+#html {
+    grid-area: html; 
+    height: 80px;   
+}
+
+#css {
+    grid-area: css;
+    height: 80px;
+}
+
+#bootstrap {
+    grid-area: bootstrap;
+    height: 80px;
+}
+
+#javascript {
+    grid-area: javascript;
+    height: 80px;
+}
+
+#react {
+    grid-area: react;
+    height: 80px;
+}
+
+.lang-icon {
+    height: 200px;
+} 
+
+/* About CSS */
+
+#about-me {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 500px 600px 1fr;
+    grid-template-rows: 500px;
+    grid-template-areas: 
+    ". about-text pic-div .";
+    height: 500px;
+     background-color:white;
+    width: 100%;
+}
+
+#about-heading {
+    grid-area: about-heading;
+    font-size: 45px;
+    font-weight: bold;
+    margin-left: 50px;
+}
+
+#about-text {
+    grid-area: about-text;
+}
+
+#about-p {
+    margin-top: 30px;
+    margin-left: 50px;
+    font-size: 20px;
+}
+
+.info-heading {
+    font-size: 45px;
+}
+
+#about p {
+    font-size: 30px;
+} 
+
+#pic-div {
+    grid-area: pic-div;
+}
+
+#about-pic {
+    height: 300px;
+    border-radius: 600px;
+    box-shadow: 0px 1px 20px 3px #888888;
+    margin-left: 100px;
+}
+
+/* My work */
+
+#projects {
+    text-align: center;
+    align-items: center;
+    display: grid;
+    height: 1000px;
+    grid-template-columns: 1fr 400px 400px 400px 1fr;
+    grid-template-rows: 200px 400px 400px;
+    grid-template-areas:
+    ". . projects-header . ."
+    ". etchasketch expense scorekeeper . "
+    ". . wine-pairer . .";
+    background-color: rgb(211, 211, 211);
+}
+
+#projects-header {
+    grid-area: projects-header;
+}
+
+#projects-header-text {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.project-title {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+#etchasketch {
+    grid-area: etchasketch;
+}
+
+#expense {
+    grid-area: expense;
+}
+
+#scorekeeper {
+    grid-area: scorekeeper;
+}
+
+#wine-pairer {
+    grid-area: wine-pairer;
+}
+
+.project {
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+.project-pic {
+    filter: brightness(100%);
+    transition: filter .3s ease;
+    height: 250px;
+    padding: 0px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 2px 2px #888888;
+}
+
+.img-hover-zoom {
+    height: 300px;
+} 
+ 
+.img-hover-zoom {
+    transition: transform .5s ease;
+}
+
+.img-hover-zoom:hover {
+    transform: scale(1.03);
+}
+
+footer {
+    color: white;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    background-image: linear-gradient(to bottom right, rgb(0, 0, 0), rgb(77, 77, 77));
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "githubLink emailLink linkedinLink";
+    align-items: center;
+    font-size: 25px;
+}
+
+a {
+    text-decoration: none;
+}
+
+footer a {
+    color: white;
+}
+
+footer a :visited {
+    color: white;
+}
+
+#githubLink {
+    grid-area: githubLink;
+}
+
+#linkedinLink {
+    grid-area: linkedinLink;
+} 
+
+#emailLink {
+    grid-area: emailLink;
+}
+
+.social-text {
+    color: white;
+    margin-left: 20px;
+}
