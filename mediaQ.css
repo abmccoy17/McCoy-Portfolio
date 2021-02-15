@@ -4,6 +4,9 @@
     }
 }
 
+
+
+
 @media (max-width: 1200px) {
     .project-pic {
         height: 175px;
@@ -23,6 +26,9 @@
     }
 }
 
+
+
+
 @media (max-width: 1050px) {
     #about-me {
         align-items: center;
@@ -40,6 +46,9 @@
        font-size: 20px;
     }
 }
+
+
+
 
 @media (max-width: 860px) {
     #welcome-section {
@@ -146,16 +155,19 @@
 
 }
 
+
+
+
 @media screen and (max-width: 768px) {
-    body {
+    body{
         overflow-x: hidden;
     }
-    .nav-links{
-        position: absolute;
+     .nav-links {
+        position:absolute;
         right: 0px;
         height: 92vh;
         top: 8vh;
-        background-color:  rgb(218, 218, 218);
+        background-color: rgb(202, 202, 202);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -167,38 +179,17 @@
         opacity: 0;
     }
     .burger{
-        display: block;
+        display:block;
+        cursor: pointer;
     }
-
-    #contact {
-        color: white;
-        font-size: 20px;
-    }
-
-    #contact .social-text {
-        display: none;
-    }
-
-    #about-me {
-        width: 100%;
-    }
-
-    #about-pic {
-        width: 300px;
-        border-radius: 40px;
-        height: 200px;
-    }
-
-    #pic-div {
-        width: 100%;
-    }
-    
-
 }
 
 .nav-active{
     transform: translateX(0%);
 }
+
+
+
 
 @keyframes navLinkFade{
     from{
