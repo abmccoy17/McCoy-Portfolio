@@ -1,0 +1,257 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+html {
+    font-family: 'Roboto Condensed', sans-serif;
+    width: 100%;
+} 
+
+
+@media (max-width: 768px) {
+    #welcome-section {
+        height: 568px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "welcome-text"
+        "headshot";
+    }
+
+    #headshot {
+        border-radius: 250px;
+        height: 200px;
+        margin-right: 60px;
+        align-self: center;
+        justify-self: right;
+        grid-area: headshot;
+        box-shadow: 0px 1px 20px 3px #888888;;
+    }
+
+    #welcome-text {
+        grid-area: welcome-text;
+        align-self: center;
+        justify-self: left;
+        margin-left: 30px;
+        font-size: 30px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 100px 100px 100px;
+        grid-template-areas: 
+        "hello"
+        "my-name"
+        "I-am"
+    }
+
+    #welcome-text h1 {
+        font-size: 70px;
+        font-weight: bold;
+    }
+
+    #hello {
+        grid-area: hello;
+        align-self: end;
+    }
+
+    #my-name {
+        margin-top: 20px;
+        grid-area: my-name;
+        align-self: center;
+    }
+
+    #I-am {
+        grid-area: I-am;
+        align-self: start;
+        margin-top: 20px;
+        margin-right: 75px;
+    } 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* About CSS */
+
+
+/* My work */
+
+#projects {
+    text-align: center;
+    align-items: center;
+    display: grid;
+    height: 1000px;
+    grid-template-columns: 1fr 400px 400px 400px 1fr;
+    grid-template-rows: 200px 400px 400px;
+    grid-template-areas:
+    ". . projects-header . ."
+    ". etchasketch expense scorekeeper . "
+    ". . wine-pairer . .";
+    background-color: rgb(211, 211, 211);
+}
+
+
+
+
+
+#etchasketch {
+    grid-area: etchasketch;
+}
+
+#expense {
+    grid-area: expense;
+}
+
+#scorekeeper {
+    grid-area: scorekeeper;
+}
+
+#wine-pairer {
+    grid-area: wine-pairer;
+}
+
+
+
+
+
+
+
+@media (max-width: 1024px) {
+    .nav-links{
+        width: 60%;
+    }
+}
+
+
+
+
+@media (max-width: 1200px) {
+    .project-pic {
+        height: 175px;
+    }
+
+    #projects {
+        text-align: center;
+        margin-top: 30px;
+        display: grid;
+        height: 630px;
+        grid-template-columns: 1fr 300px 300px 300px 1fr;
+        grid-template-rows: 100px 250px 250px;
+        grid-template-areas:
+        ". . projects-header . ."
+        ". etchasketch expense scorekeeper . "
+        ". . wine-pairer . .";
+    }
+}
+
+
+
+
+@media (max-width: 1050px) {
+    #about-me {
+        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 500px;
+        grid-template-areas: 
+        "about-text pic-div";
+        height: 500px;
+        background-color:white;
+        width: 100%;
+    }
+
+    #about-p {
+       font-size: 20px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    
+    #skills {
+        margin-top: 30px;
+        padding: 50px;
+        background-image: linear-gradient(to bottom right, rgb(0, 0, 0), rgb(77, 77, 77));
+        height: 600px;
+        width: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 150px 150px 150px;
+        grid-template-areas: 
+        ". skills-header ."
+        "html css bootstrap"
+        "javascript . react";
+        align-items: center;
+        justify-items: center;
+    }
+
+    #about-me {
+        text-align: center;
+        justify-items: center;
+        height: 700px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+        "about-text"
+        "pic-div";
+    }
+
+    #about-p {
+        font-size: 17px;
+        margin: 30px;
+    }
+
+    #about-pic{
+        justify-self: center;
+        margin-left: 0;
+        height: 200px;
+        width: 00px;
+    }
+
+    footer {
+        width: 100%;
+        font-size: 12px;
+    }
+}

@@ -24,15 +24,7 @@ html {
     width: 100%;
 } 
 
-#welcome-section {
-    height: 600px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-    "headshot welcome-text";
-}
-
-nav{
+nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -45,13 +37,15 @@ nav{
     width: 30%;
 }
 
-.nav-links li{
+.nav-links li {
     list-style: none;
 }
 
 .nav-links a{
     text-decoration: none;
     letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 14px;
 }
 
 .burger {
@@ -68,381 +62,216 @@ nav{
     transition: all 0.3s ease;
 }
 
-#headshot {
-    border-radius: 250px;
-    height: 300px;
-    margin-right: 60px;
-    align-self: center;
-    justify-self: right;
-    grid-area: headshot;
-    box-shadow: 0px 1px 20px 3px #888888;;
-}
-
-#welcome-text {
-    grid-area: welcome-text;
-    align-self: center;
-    justify-self: left;
-    margin-left: 30px;
-    font-size: 30px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 100px 100px 100px 100px;
-    grid-template-areas: 
-    "hello"
-    "my-name"
-    "I-am"
-}
-
-#welcome-text h1 {
-    font-size: 70px;
-    font-weight: bold;
-}
-
-#hello {
-    grid-area: hello;
-    align-self: end;
-
-}
-
-#my-name {
-    margin-top: 20px;
-    grid-area: my-name;
-    align-self: center;
-}
-
-#I-am {
-    grid-area: I-am;
-    align-self: start;
-    margin-top: 20px;
-    margin-right: 75px;
-} 
-
-#skills {
-    margin-top: 30px;
-    padding: 50px;
-    background-image: linear-gradient(to bottom right, rgb(0, 0, 0), rgb(77, 77, 77));
-    height: 500px;
-    width: auto;
-    display: grid;
-    grid-template-columns: 1fr 135px 135px 135px 135px 135px 1fr;
-    grid-template-rows: 50px 350px;
-    grid-template-areas: 
-    ". . . skills-header . . ."
-    ". html css bootstrap javascript react .";
-    align-items: center;
-    justify-items: center;
-}
-
-#skills-header {
-    grid-area: skills-header;
-    color: white;
-    justify-content: center;
-}
-
-#skills-header-text {
-    font-size: 45px;
-    font-weight: bold;
-}
-
-#html {
-    grid-area: html; 
-    height: 80px;   
-}
-
-#css {
-    grid-area: css;
-    height: 80px;
-}
-
-#bootstrap {
-    grid-area: bootstrap;
-    height: 80px;
-}
-
-#javascript {
-    grid-area: javascript;
-    height: 80px;
-}
-
-#react {
-    grid-area: react;
-    height: 80px;
-}
-
-.lang-icon {
-    height: 200px;
-} 
-
-/* About CSS */
-
-#about-me {
-    align-items: center;
-    display: grid;
-    grid-template-columns: 1fr 500px 600px 1fr;
-    grid-template-rows: 500px;
-    grid-template-areas: 
-    ". about-text pic-div .";
-    height: 500px;
-    background-color:white;
-    width: 100%;
-}
-
-#about-heading {
-    grid-area: about-heading;
-    font-size: 45px;
-    font-weight: bold;
-    margin-left: 50px;
-}
-
-#about-text {
-    grid-area: about-text;
-}
-
-#about-p {
-    margin-top: 30px;
-    margin-left: 50px;
-    font-size: 20px;
-}
-
-.info-heading {
-    font-size: 45px;
-}
-
-#about p {
-    font-size: 30px;
-} 
-
-#pic-div {
-    grid-area: pic-div;
-}
-
-#about-pic {
-    height: 300px;
-    border-radius: 600px;
-    box-shadow: 0px 1px 20px 3px #888888;
-    margin-left: 100px;
-}
-
-/* My work */
-
-#projects {
-    text-align: center;
-    align-items: center;
-    display: grid;
-    height: 1000px;
-    grid-template-columns: 1fr 400px 400px 400px 1fr;
-    grid-template-rows: 200px 400px 400px;
-    grid-template-areas:
-    ". . projects-header . ."
-    ". etchasketch expense scorekeeper . "
-    ". . wine-pairer . .";
-    background-color: rgb(211, 211, 211);
-}
-
-#projects-header {
-    grid-area: projects-header;
-}
-
-#projects-header-text {
-    font-size: 45px;
-    font-weight: bold;
-}
-
-.project-title {
-    font-size: 25px;
-    margin-bottom: 20px;
-}
-
-#etchasketch {
-    grid-area: etchasketch;
-}
-
-#expense {
-    grid-area: expense;
-}
-
-#scorekeeper {
-    grid-area: scorekeeper;
-}
-
-#wine-pairer {
-    grid-area: wine-pairer;
-}
-
-.project {
-    overflow: hidden;
-    border-radius: 30px;
-}
-
-.project-pic {
-    filter: brightness(100%);
-    transition: filter .3s ease;
-    height: 250px;
-    padding: 0px;
-    border-radius: 10px;
-    box-shadow: 0px 1px 2px 2px #888888;
-}
-
-.img-hover-zoom {
-    height: 300px;
-} 
- 
-.img-hover-zoom {
-    transition: transform .5s ease;
-}
-
-.img-hover-zoom:hover {
-    transform: scale(1.03);
-}
-
-footer {
-    color: white;
-    left: 0;
-    bottom: 0;
-    height: 100px;
-    width: 100%;
-    background-image: linear-gradient(to bottom right, rgb(0, 0, 0), rgb(77, 77, 77));
-    text-align: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-    "githubLink emailLink linkedinLink";
-    align-items: center;
-    font-size: 25px;
-}
-
-a {
-    text-decoration: none;
-}
-
-footer a {
-    color: white;
-}
-
-footer a :visited {
-    color: white;
-}
-
-#githubLink {
-    grid-area: githubLink;
-}
-
-#linkedinLink {
-    grid-area: linkedinLink;
-} 
-
-#emailLink {
-    grid-area: emailLink;
-}
-
-.social-text {
-    color: white;
-    margin-left: 20px;
-}
-
 @media (max-width: 1024px) {
-    .nav-links{
-        width: 60%;
+    .nav-links {
+        display:flex;
+        justify-content: space-around;
+        width: 30%;
     }
 }
 
+@media (max-width: 768px) {
 
-
-
-@media (max-width: 1200px) {
-    .project-pic {
-        height: 175px;
+    body {
+        overflow-x: hidden;
     }
-
-    #projects {
-        text-align: center;
-        margin-top: 30px;
-        display: grid;
-        height: 630px;
-        grid-template-columns: 1fr 300px 300px 300px 1fr;
-        grid-template-rows: 100px 250px 250px;
-        grid-template-areas:
-        ". . projects-header . ."
-        ". etchasketch expense scorekeeper . "
-        ". . wine-pairer . .";
-    }
-}
-
-
-
-
-@media (max-width: 1050px) {
-    #about-me {
+    
+    .nav-links {
+        position: absolute;  
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color:#bebebe;
+        display: flex;
+        flex-direction: column;
         align-items: center;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 500px;
-        grid-template-areas: 
-        "about-text pic-div";
-        height: 500px;
-        background-color:white;
-        width: 100%;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
     }
 
-    #about-p {
-       font-size: 20px;
+    .nav-links li {
+        opacity: 0; 
     }
-}
 
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
 
-@media (max-width: 860px) {
     #welcome-section {
-        justify-self: center;
-        width: auto;
-        height: 600px;
+        height: 568px;
+        width: 100%;
         display: grid;
+        justify-items: center;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 240px 240px;
         grid-template-areas:
         "welcome-text"
-        "headshot"
-        "contact-button";
+        "headshot-div";
+        margin-bottom: 0;
+    }
+
+    #headshot-div {
+        grid-area: headshot-div;
+        padding: 20px;
+    }
+
+    #headshot {
+        border-radius: 250px;
+        height: 200px;
+        grid-area: headshot;
+        box-shadow: 0px 1px 20px 3px #888888;
     }
 
     #welcome-text {
+        height: 100%;
+        width: 100%;
         justify-items: center;
-        justify-self: center;
-        margin-left: 20px;
-        height: 300px;
-        width: auto;
+        align-items: center;
         grid-area: welcome-text;
-        margin-left: 0px;
-        margin-left: 0px;
-        font-size: 30px;
+        font-size: 20px;
         display: grid;
-        grid-template-rows: 100px 100px 100px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 80px 80px 80px;
         grid-template-areas: 
         "hello"
         "my-name"
         "I-am"
     }
 
+    #welcome-text h1 {
+        font-size: 40px;
+        font-weight: bold;
+    }
+
     #hello {
-        font-size: 20px;
+        grid-area: hello;
+        align-self: end;
+    }
+
+    #my-name {
+        grid-area: my-name;
     }
 
     #I-am {
-        font-size: 20px;
-        align-self: center;
-        margin: 10px 0px 0px 0px;
+        grid-area: I-am;
+        align-self: start;
+    } 
+
+    #skills {
+        background-image: linear-gradient(to bottom right, rgb(0, 0, 0), rgb(77, 77, 77));
+        height: 500px;
+        width: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 120px 120px 120px 120px;
+        grid-template-areas: 
+        "skills-header ."
+        "html css"
+        "bootstrap javascript"
+        "react .";
+        align-items: center;
+        justify-items: center;
     }
 
-    #headshot {
-        justify-self: center;
-        margin-right: 0;
+    .lang-icon {
+        height: 25px;
+    } 
+
+    #skills-header {
+        grid-area: skills-header;
+        color: white;
+        justify-content: center;
+        grid-column: 1 /span 2;
+    }
+
+    #skills-header-text {
+        font-size: 45px;
+        font-weight: bold;
+    }
+
+    #html {
+        grid-area: html; 
+        height: 80px;   
+    }
+
+    #css {
+        grid-area: css;
+        height: 80px;
+    }
+
+    #bootstrap {
+        grid-area: bootstrap;
+        height: 80px;
+    }
+
+    #javascript {
+        grid-area: javascript;
+        height: 80px;
+    }
+
+    #react {
+        grid-area: react;
+        height: 80px;
+        grid-column: 1 /span 2;
+    }
+
+    #about-me {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 220px 220px;
+        grid-template-areas: 
+        "about-heading"
+        "about-p"
+        "pic-div";
+        background-color:white;
+        width: 100%;
+        justify-items: center;
+    }
+
+    #about-heading {
+        grid-area: about-heading;
+        font-size: 45px;
+        font-weight: bold;
+        align-self: center;
+    }
+
+    #about-p {
+        grid-area: about-p;
+        font-size: 16px;
+        text-align: center;
+        margin: 15px;
+    }
+
+    .info-heading {
+        font-size: 45px;
+    }
+
+    #about p {
+        font-size: 30px;
+    } 
+
+    #pic-div {
+        grid-area: pic-div;
+        align-self: center;
+    }
+
+    #about-pic {
+        height: 175px;
+        width: 250px;
+        border-radius: 600px;
+        box-shadow: 0px 1px 20px 3px #888888;
     }
 
     #projects {
         text-align: center;
+        margin-top: 50px;
+        background-color: rgb(202, 202, 202);
         display: grid;
-        height: 1200px;
+        height: 1350px;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 250px 250px 250px 250px 1fr;
+        grid-template-rows: 150px 300px 300px 300px 300px;
         grid-template-areas:
         "projects-header"
         "etchasketch"
@@ -451,46 +280,123 @@ footer a :visited {
         "wine-pairer";
     }
 
+    #projects-header {
+        grid-area: projects-header;
+        align-self: center;
+    }
+
     #projects-header-text {
-        margin-top: 40px;
+        font-size: 45px;
+        font-weight: bold;
     }
 
-    #skills {
-        margin-top: 30px;
-        padding: 50px;
+
+    .project-title {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+
+
+    .project {
+        overflow: hidden;
+        border-radius: 30px;
+        align-self: center;
+    }
+
+    .project-pic {
+        filter: brightness(100%);
+        transition: filter .3s ease;
+        height: 175px;
+        border-radius: 10px;
+        box-shadow: 0px 1px 2px 2px #888888;
+    }
+
+    .img-hover-zoom {
+        height: 200px;
+    } 
+ 
+    .img-hover-zoom {
+        transition: transform .5s ease;
+    }
+
+    .img-hover-zoom:hover {
+        transform: scale(1.03);
+    }
+
+    footer {
+        color: white;
+        height: 100px;
+        width: 100%;
         background-image: linear-gradient(to bottom right, rgb(0, 0, 0), rgb(77, 77, 77));
-        height: 600px;
-        width: auto;
+        text-align: center;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 150px 150px 150px;
-        grid-template-areas: 
-        ". skills-header ."
-        "html css bootstrap"
-        "javascript . react";
-        align-items: center;
-        justify-items: center;
-    }
-
-    #about-me {
-        text-align: center;;
-        justify-items: center;
-        height: 700px;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 75px 1fr 75px;
         grid-template-areas:
-        "about-text"
-        "pic-div";
+        "githubLink emailLink linkedinLink";
+        align-items: center;
+        font-size: 12px;
     }
 
-    #about-p {
-        font-size: 17px;
-        margin: 30px;
+    a {
+        text-decoration: none;
     }
 
-    #about-pic{
-        justify-self: center;
-        margin-left: 0;
+    footer a {
+        color: white;
     }
 
+    footer a :visited {
+        color: white;
+    }
+
+    #githubLink {
+        grid-area: githubLink;
+    }
+
+    #linkedinLink {
+        grid-area: linkedinLink;
+    } 
+
+    #emailLink {
+        grid-area: emailLink;
+    }
+
+    .social-text {
+        color: white;
+        margin-left: 5px;
+    }
 }
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
